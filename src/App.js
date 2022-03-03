@@ -11,7 +11,9 @@ function App() {
   async function addImages(imgFileUrl) {
     let randomThing = Math.floor(Math.random() * 10) + 1;
     let imgElement = imgFileUrl && (
-      <img src={imgFileUrl} width="600px" alt={randomThing} />
+      <div className="Img-holder">
+        <img src={imgFileUrl} width="600px" alt={randomThing} />
+      </div>
     );
     updateImages([...images, imgElement]);
   }
@@ -35,7 +37,7 @@ function App() {
         <h1>IPFS Uploading Example</h1>
         <input type="file" onChange={onChange} />
       </div>
-      <div className="imgDisplay">{images}</div>
+      <div className="Img-displayer">{images}</div>
     </div>
   );
 }
