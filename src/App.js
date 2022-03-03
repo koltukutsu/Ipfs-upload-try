@@ -5,7 +5,6 @@ import { create } from "ipfs-http-client";
 const client = create("https://ipfs.infura.io:5001/api/v0");
 
 function App() {
-  // const [fileUrl, updateFileUrl] = useState(``);
   const [images, updateImages] = useState("");
 
   async function addImages(imgFileUrl) {
@@ -25,10 +24,10 @@ function App() {
       const added = await client.add(file);
       const url = `https://ipfs.infura.io/ipfs/${added.path}`;
       console.log(url);
-      // updateFileUrl(url);
       addImages(url);
     } catch (error) {
       console.log("Error uploading file: ", error);
+      alert("Error uploading file: ", error);
     }
   }
   return (
