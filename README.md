@@ -1,4 +1,4 @@
-# Try to upload an img to IPFS wihtout pinning it
+# Try to upload an img to IPFS without pinning it
 ![Example](./images/screenShot.jpeg)
 
 ```bash
