@@ -9,7 +9,10 @@ function App() {
   const [images, updateImages] = useState("");
 
   async function addImages(imgFileUrl) {
-    let imgElement = imgFileUrl && <img src={imgFileUrl} width="600px" />;
+    let randomThing = Math.floor(Math.random() * 10) + 1;
+    let imgElement = imgFileUrl && (
+      <img src={imgFileUrl} width="600px" alt={randomThing} />
+    );
     updateImages([...images, imgElement]);
   }
   async function onChange(e) {
